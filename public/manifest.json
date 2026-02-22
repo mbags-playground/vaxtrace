@@ -1,0 +1,76 @@
+{
+  "name": "VaxTrace Africa",
+  "short_name": "VaxTrace",
+  "description": "Secure vaccination record management for Africa with offline support and biometric authentication",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#6B46C1",
+  "background_color": "#FAFAFA",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-540x720.png",
+      "sizes": "540x720",
+      "type": "image/png"
+    },
+    {
+      "src": "/screenshot-1080x1440.png",
+      "sizes": "1080x1440",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["medical", "health"],
+  "shortcuts": [
+    {
+      "name": "View Vaccination Records",
+      "short_name": "Records",
+      "description": "View your vaccination history",
+      "url": "/patient/records",
+      "icons": [
+        {
+          "src": "/shortcut-records.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Add Vaccination Record",
+      "short_name": "Add Record",
+      "description": "Add a new vaccination record",
+      "url": "/worker/add-record",
+      "icons": [
+        {
+          "src": "/shortcut-add.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}
