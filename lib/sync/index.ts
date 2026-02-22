@@ -8,12 +8,12 @@ import { getUnsyncedItems, markSyncQueueItemAsSynced } from '../db';
  */
 export async function initializeSyncService(): Promise<void> {
   if (typeof window === 'undefined') {
-    console.log('[v0] Service Worker initialization skipped (server-side)');
+    console.log('Service Worker initialization skipped (server-side)');
     return;
   }
 
   if (!navigator.serviceWorker) {
-    console.warn('[v0] Service Worker not supported in this browser');
+    console.warn('Service Worker not supported in this browser');
     return;
   }
 
@@ -23,12 +23,12 @@ export async function initializeSyncService(): Promise<void> {
       updateViaCache: 'none',
     });
 
-    console.log('[v0] Service Worker registered successfully');
+    console.log('Service Worker registered successfully');
 
     // Request persistent storage
     if (navigator.storage && navigator.storage.persist) {
       const persisted = await navigator.storage.persist();
-      console.log('[v0] Persistent storage:', persisted ? 'granted' : 'denied');
+      console.log('Persistent storage:', persisted ? 'granted' : 'denied');
     }
 
     // Handle controller change
@@ -37,7 +37,7 @@ export async function initializeSyncService(): Promise<void> {
       if (newWorker) {
         newWorker.addEventListener('statechange', () => {
           if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-            console.log('[v0] New Service Worker update available');
+            console.log('New Service Worker update available');
             // You could show a toast notification here
           }
         });

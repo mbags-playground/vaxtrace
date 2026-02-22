@@ -1,0 +1,29 @@
+<svg width="192" height="192" viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="appleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A2D85;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5A3FA0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="192" height="192" rx="45" fill="url(#appleGrad)"/>
+  
+  <g transform="translate(96, 96)">
+    <path d="M -6,-48 Q -33,-46 -42,-22 Q -47,10 -36,36 Q -12,52 20,48 Q 43,46 47,14 Q 50,-23 36,-44 Q 9,-55 -6,-48 Z" 
+          fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <path d="M -4,-40 Q -28,-39 -36,-18 Q -40,6 -30,32 Q -9,45 17,43 Q 36,42 40,16 Q 44,-17 30,-38 Q 7,-50 -4,-40 Z" 
+          fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <path d="M -2,-34 Q -22,-33 -30,-16 Q -35,9 -24,30 Q -6,42 14,40 Q 31,39 37,16 Q 40,-14 27,-34 Q 5,-46 -2,-34 Z" 
+          fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <path d="M 0,-27 Q -17,-26 -25,-11 Q -30,11 -18,28 Q 1,38 12,37 Q 27,36 31,14 Q 34,-10 24,-27 Q 3,-39 0,-27 Z" 
+          fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <path d="M 2,-20 Q -11,-19 -18,-8 Q -22,10 -12,22 Q 3,31 9,30 Q 20,29 24,12 Q 27,-6 19,-20 Q 1,-32 2,-20 Z" 
+          fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <circle cx="0" cy="0" r="4" fill="white"/>
+  </g>
+</svg>

@@ -22,11 +22,11 @@ export default function CallbackContent() {
           throw new Error('No authorization code received');
         }
 
-        console.log('[v0] Processing MOSIP auth callback');
+        console.log('Processing MOSIP auth callback');
 
         // Exchange code for tokens and user info
         const { accessToken, idToken, user } = await exchangeCodeForToken(code);
-        console.log('[v0] Successfully exchanged code for tokens, user:', user.name);
+        console.log('Successfully exchanged code for tokens, user:', user.name);
 
         // Store access token
         if (typeof window !== 'undefined') {
@@ -40,12 +40,12 @@ export default function CallbackContent() {
 
         // Create user session
         const session = await createUserSession(user, role);
-        console.log('[v0] User session created:', session.id);
+        console.log('User session created:', session.id);
 
         // Redirect to appropriate dashboard
         router.replace(`/${role}/dashboard`);
       } catch (err) {
-        console.error('[v0] Auth callback error:', err);
+        console.error('Auth callback error:', err);
         setError(err instanceof Error ? err.message : 'Authentication failed');
         setIsProcessing(false);
 

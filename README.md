@@ -4,7 +4,7 @@ A progressive web application for secure vaccination record management across Af
 
 ## Overview
 
-VaxTrace Africa enables refugees, patients, healthcare workers, administrators, and government officials to securely manage vaccination records with:
+VaxTrace Africa enables Africans, patients, healthcare workers, administrators, and government officials to securely manage vaccination records with:
 
 - **MOSIP Biometric Authentication**: Fingerprint, iris, and face recognition via MOSIP eSignet
 - **Offline-First Architecture**: Full functionality without internet connectivity

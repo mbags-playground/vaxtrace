@@ -12,8 +12,8 @@ export default function HomePage() {
       <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <Fingerprint className="w-5 h-5 text-primary-foreground" />
+            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#4A2D85] to-[#5A3FA0] flex items-center justify-center shadow-lg">
+              <Fingerprint className="w-6 h-6 text-white" strokeWidth={1.5} />
             </div>
             <span className="font-bold text-xl text-foreground">VaxTrace Africa</span>
           </div>
@@ -32,7 +32,7 @@ export default function HomePage() {
                 Secure vaccination records for Africa
               </h1>
               <p className="text-xl text-muted-foreground text-balance">
-                Powered by MOSIP biometric identity verification. Accessible offline. Built for refugee camps and low-connectivity regions.
+                Powered by MOSIP biometric identity verification. Accessible offline. Built for everyone.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -84,7 +84,7 @@ export default function HomePage() {
                   <span className="text-sm font-semibold text-muted-foreground">Regional</span>
                 </div>
                 <p className="text-2xl font-bold">Africa-First</p>
-                <p className="text-xs text-muted-foreground">Built for refugees</p>
+                <p className="text-xs text-muted-foreground">Built for africans</p>
               </CardContent>
             </Card>
           </div>
@@ -329,7 +329,7 @@ export default function HomePage() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             {
-              role: 'Patients & Refugees',
+              role: 'Patients & Africans',
               description: 'View personal vaccination records, track upcoming doses, share verified records via QR code',
               color: 'border-primary/20 bg-primary/5',
             },
@@ -446,8 +446,8 @@ export default function HomePage() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                  <Fingerprint className="w-5 h-5 text-primary-foreground" />
+                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#4A2D85] to-[#5A3FA0] flex items-center justify-center shadow-lg">
+                  <Fingerprint className="w-6 h-6 text-white" strokeWidth={1.5} />
                 </div>
                 <span className="font-bold text-foreground">VaxTrace Africa</span>
               </div>

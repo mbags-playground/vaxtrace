@@ -18,7 +18,7 @@ interface RoleOption {
 const roleOptions: RoleOption[] = [
   {
     id: 'patient',
-    name: 'Patient/Refugee',
+    name: 'Patient',
     description: 'View and manage your vaccination records securely',
     icon: <User className="h-8 w-8" />,
     color: 'bg-blue-50 hover:bg-blue-100',

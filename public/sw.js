@@ -14,12 +14,12 @@ const STATIC_ASSETS = [
 
 // Install event - cache static assets
 self.addEventListener('install', (event) => {
-  console.log('[v0] Service Worker installing...');
+  console.log('Service Worker installing...');
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('[v0] Caching static assets');
+      console.log('Caching static assets');
       return cache.addAll(STATIC_ASSETS).catch(() => {
-        console.log('[v0] Some assets failed to cache (this is ok, the app may not be fully built yet)');
+        console.log('Some assets failed to cache (this is ok, the app may not be fully built yet)');
       });
     })
   );
@@ -28,14 +28,14 @@ self.addEventListener('install', (event) => {
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
-  console.log('[v0] Service Worker activating...');
+  console.log('Service Worker activating...');
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames
           .filter((name) => name.startsWith('vaxtrace-') && name !== CACHE_NAME)
           .map((name) => {
-            console.log('[v0] Deleting old cache:', name);
+            console.log('Deleting old cache:', name);
             return caches.delete(name);
           })
       );
@@ -81,7 +81,7 @@ self.addEventListener('fetch', (event) => {
           // Fall back to cache
           return caches.match(request).then((cachedResponse) => {
             if (cachedResponse) {
-              console.log('[v0] API request offline, using cache:', request.url);
+              console.log('API request offline, using cache:', request.url);
               return cachedResponse;
             }
             // No cache, return offline response
@@ -123,7 +123,7 @@ self.addEventListener('fetch', (event) => {
 
 // Background sync for offline mutations
 self.addEventListener('sync', (event) => {
-  console.log('[v0] Background sync triggered:', event.tag);
+  console.log('Background sync triggered:', event.tag);
 
   if (event.tag === 'sync-vaccination-records') {
     event.waitUntil(syncVaccinationRecords());
@@ -133,7 +133,7 @@ self.addEventListener('sync', (event) => {
 // Sync vaccination records from IndexedDB to server
 async function syncVaccinationRecords() {
   try {
-    console.log('[v0] Starting background sync for vaccination records');
+    console.log('Starting background sync for vaccination records');
 
     // Open IndexedDB
     const db = await new Promise((resolve, reject) => {
@@ -152,7 +152,7 @@ async function syncVaccinationRecords() {
       request.onerror = () => reject(request.error);
     });
 
-    console.log(`[v0] Found ${unsyncedItems.length} unsynced items`);
+    console.log(`Found ${unsyncedItems.length} unsynced items`);
 
     // Sync each item
     for (const item of unsyncedItems) {
@@ -177,27 +177,27 @@ async function syncVaccinationRecords() {
               request.onerror = () => reject(request.error);
             });
 
-            console.log(`[v0] Synced item: ${item.id}`);
+            console.log(`Synced item: ${item.id}`);
           } else {
-            console.log(`[v0] Sync failed for item: ${item.id}`);
+            console.log(`Sync failed for item: ${item.id}`);
           }
         } catch (error) {
-          console.error(`[v0] Error syncing item ${item.id}:`, error);
+          console.error(`Error syncing item ${item.id}:`, error);
         }
       }
     }
 
-    console.log('[v0] Background sync completed');
+    console.log('Background sync completed');
     db.close();
   } catch (error) {
-    console.error('[v0] Background sync error:', error);
+    console.error('Background sync error:', error);
     throw error;
   }
 }
 
 // Message handling for client communication
 self.addEventListener('message', (event) => {
-  console.log('[v0] Service Worker received message:', event.data);
+  console.log('Service Worker received message:', event.data);
 
   if (event.data && event.data.type === 'SYNC_NOW') {
     syncVaccinationRecords()

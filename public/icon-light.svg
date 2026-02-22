@@ -1,0 +1,23 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6B46C1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="32" height="32" rx="7" fill="url(#lightGrad)"/>
+  
+  <g transform="translate(16, 16)">
+    <path d="M -1,-7 Q -5,-6.8 -6.8,-3 Q -7.5,1.5 -5.5,5.5 Q -1.5,8 3,7.5 Q 6.5,7 7,2 Q 7.8,-3.5 5.5,-6.5 Q 1.5,-8.5 -1,-7 Z" 
+          fill="none" stroke="white" stroke-width="0.4" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <path d="M -0.8,-5.5 Q -4,-5.3 -5.5,-2.5 Q -6.2,1 -4,-4.8 Q -0.8,6.5 2.5,6.2 Q 5.5,6 6,2.5 Q 6.5,-2.5 4.5,-5.8 Q 1,-7 -0.8,-5.5 Z" 
+          fill="none" stroke="white" stroke-width="0.35" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <path d="M -0.5,-4.5 Q -3,-4.3 -4.5,-2 Q -5,0.8 -3,4 Q 0,5.8 2,5.5 Q 4.5,5.2 5,2 Q 5.5,-1.5 3.8,-4.5 Q 0.8,-6 -0.5,-4.5 Z" 
+          fill="none" stroke="white" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <circle cx="0" cy="0" r="0.6" fill="white"/>
+  </g>
+</svg>
